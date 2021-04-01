@@ -1,0 +1,4 @@
+{
+    "/creatures/:id": "/creatures/:id?_embed=regions",
+    "/plants/:id": "/plants/:id?_embed=regions"
+}

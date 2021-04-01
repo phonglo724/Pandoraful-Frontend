@@ -1,0 +1,234 @@
+// {
+//   "creatures": [
+//     {
+//       "id": 1,
+//       "name": "Great Leonapteryx",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWDMyUzv1aUZ-Z-jZfKroR7wEGo981k3LD3A&usqp=CAU",
+//       "habitat": "Mountains",
+//       "feed": 9
+//     },
+//     {
+//       "id": 2,
+//       "name": "Mountain Banshee",
+//       "image": "https://static.turbosquid.com/Preview/001146/302/49/3D-avatar-mountain-banshees-ikran_0.jpg",
+//       "habitat": "Mountains",
+//       "feed": 3
+//     },
+//     {
+//       "id": 3,
+//       "name": "Thanator",
+//       "image": "https://cdnb.artstation.com/p/assets/images/images/029/566/873/large/ryden-oliver-asset.jpg?1597952368",
+//       "habitat": "Rainforest",
+//       "feed": 3
+//     },
+//     {
+//       "id": 4,
+//       "name": "Hammerhead Titanothere",
+//       "image": "https://i.pinimg.com/originals/63/2a/11/632a11387b5bef2627b57e071cd9da6c.png",
+//       "habitat": "Jungle",
+//       "feed": 2
+//     },
+//     {
+//       "id": 5,
+//       "name": "Viperwolf",
+//       "image": "https://lh5.googleusercontent.com/-ydhA24sLjRI/TYiNtr0qwZI/AAAAAAAAAo0/SKJQWuppjyo/s1600/dmse2c.jpg",
+//       "habitat": "Rainforest and Desert",
+//       "feed": 2
+//     },
+//     {
+//       "id": 6,
+//       "name": "Direhorse",
+//       "image": "https://i.ytimg.com/vi/4plftv4aCSc/maxresdefault.jpg",
+//       "habitat": "Forest",
+//       "feed": 1
+//     },
+//     {
+//       "id": 7,
+//       "name": "Akula",
+//       "image": "https://i.ytimg.com/vi/COtwVpbIams/maxresdefault.jpg",
+//       "habitat": "Water",
+//       "feed": 3
+//     },
+//     {
+//       "id": 8,
+//       "name": "Arachnoid",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaJYRdifjvhCyZoxBEk4jL4t_vCDiyt9Dkfw&usqp=CAU",
+//       "habitat": "Rainforest",
+//       "feed": 2
+//     },
+//     {
+//       "id": 9,
+//       "name": "Sagittaria",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuhDMXS3zWMTg3-hSGed4dU1po4CVo-TModA&usqp=CAU",
+//       "habitat": "Water",
+//       "feed": 2
+//     },
+//     {
+//       "id": 10,
+//       "name": "Hexapede",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTzYs2XK-Q1PPDHHBO2d6M47E6LjiA3W1vAiA&usqp=CAU",
+//       "habitat": "Rainforest and Desert",
+//       "feed": 3
+//     },
+//     {
+//       "id": 11,
+//       "name": "Prolemuris",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSKClnrphuCD1c7nZRGNldJ4BU2m-SOvPf8w&usqp=CAU",
+//       "habitat": "Jungle",
+//       "feed": 2
+//     },
+//     {
+//       "id": 12,
+//       "name": "Sturmbeest",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzNIttwX9JIn7Ix7mhbT-8jMWDaw1M0vvO4Q&usqp=CAU",
+//       "habitat": "Jungle and Rainforest",
+//       "feed": 2
+//     },
+//     {
+//       "id": 13,
+//       "name": "Tetrapteron",
+//       "image": "https://avataroldal.eoldal.hu/img/picture/106/tetrapteron03s.jpg",
+//       "habitat": "Mountains",
+//       "feed": 0
+//     }
+//   ],
+//   "plants": [
+//     {
+//       "id": 1,
+//       "name": "Spartan",
+//       "image": "https://static.wikia.nocookie.net/jamescameronsavatar/images/e/e6/Spartan.png/revision/latest/scale-to-width-down/340?cb=20161209171334",
+//       "give_it_water": 0,
+//       "give_it_sun": 0,
+//       "give_it_siblings": 0,
+//       "give_it_air": 0
+//     },
+//     {
+//       "id": 2,
+//       "name": "Helicoradian",
+//       "image": "https://i.pinimg.com/originals/f2/f3/44/f2f344379ef62c0e3cd1b78e33f1b9e7.jpg",
+//       "give_it_water": 0,
+//       "give_it_sun": 0,
+//       "give_it_siblings": 0,
+//       "give_it_air": 0
+//     },
+//     {
+//       "id": 3,
+//       "name": "Panopyra",
+//       "image": "https://static.wikia.nocookie.net/jamescameronsavatar/images/f/f5/Panopyra3.png/revision/latest?cb=20101115180644",
+//       "give_it_water": 0,
+//       "give_it_sun": 0,
+//       "give_it_siblings": 0,
+//       "give_it_air": 0
+//     },
+//     {
+//       "id": 4,
+//       "name": "Woodsprite",
+//       "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvIKbfZ6Iiuuxk0C0nelqKrTpyyuv-XPefnQ&usqp=CAU",
+//       "give_it_water": 0,
+//       "give_it_sun": 0,
+//       "give_it_siblings": 0,
+//       "give_it_air": 0
+//     },
+//     {
+//       "id": 5,
+//       "name": "Octoshroom",
+//       "image": "https://secondpandora.files.wordpress.com/2012/09/octoshroom.jpg",
+//       "give_it_water": 0,
+//       "give_it_sun": 0,
+//       "give_it_siblings": 0,
+//       "give_it_air": 0
+//     }
+//   ],
+//   "language": [
+//     {
+//       "id": 1,
+//       "english": "Hello",
+//       "navi": "Kaltxì",
+//       "pronunciation": "kal-ti"
+//     },
+//     {
+//       "id": 2,
+//       "english": "Goodbye, Eywa (be) with you",
+//       "navi": "Eywa ngahu",
+//       "pronunciation": "ej-wa na-hu"
+//     },
+//     {
+//       "id": 3,
+//       "english": "Friend",
+//       "navi": "Eylan",
+//       "pronunciation": "ej-lan"
+//     },
+//     {
+//       "id": 4,
+//       "english": "World",
+//       "navi": "Kifkey",
+//       "pronunciation": "ki-fkej"
+//     },
+//     {
+//       "id": 5,
+//       "english": "Beautiful",
+//       "navi": "Tìlor",
+//       "pronunciation": "ti-lor"
+//     },
+//     {
+//       "id": 6,
+//       "english": "Fly",
+//       "navi": "Tswayon",
+//       "pronunciation": "tsw-aj-on"
+//     },
+//     {
+//       "id": 7,
+//       "english": "Survive",
+//       "navi": "Emrey",
+//       "pronunciation": "em-rej"
+//     },
+//     {
+//       "id": 8,
+//       "english": "Blue",
+//       "navi": "Eampin",
+//       "pronunciation": "e-am-pin"
+//     }
+//   ],
+//   "regions": [
+//     {
+//       "id": 1,
+//       "creatureId": 10,
+//       "plantId": 1,
+//       "region": "The Plains",
+//       "region_image": "https://static.wikia.nocookie.net/jamescameronsavatar/images/7/77/Horse_Clan_Plains.jpg/revision/latest/scale-to-width-down/1000?cb=20100426222655",
+//       "clan": "Olangi Clan"
+//     },
+//     {
+//       "id": 2,
+//       "creatureId": 9,
+//       "plantId": 2,
+//       "region": "The Reefs",
+//       "region_image": "https://static.wikia.nocookie.net/jamescameronsavatar/images/2/20/Metkayina_Village.png/revision/latest/scale-to-width-down/1000?cb=20210114223756",
+//       "clan": "Metkayina Clan"
+//     },
+//     {
+//       "id": 3,
+//       "creatureId": 11,
+//       "plantId": 3,
+//       "region": "The Jungle",
+//       "region_image": "http://wallpoper.com/images/00/40/30/04/avatar_00403004.jpg",
+//       "clan": "Omaticaya Clan, Tipani Clan, Tawkami Clan, Kekunan Clan"
+//     },
+//     {
+//       "id": 4,
+//       "creatureId": 1,
+//       "plantId": 4,
+//       "region": "The Hallelujah Mountains",
+//       "region_image": "https://s3.amazonaws.com/ffe-ugc/avatar/assets/914fa32a-18bd-11e8-ba42-000d3a3122f5_d_1920w.jpg?v=57",
+//       "clan": "Ni'awve Clan"
+//     },
+//     {
+//       "id": 5,
+//       "creatureId": 7,
+//       "plantId": 5,
+//       "region": "The Coast",
+//       "region_image": "https://avatarpandorarising.imgix.net/2d4abefc-e014-4d56-a454-7b8662b8bf59/Pandora-Shores-VB.jpg",
+//       "clan": "Tayrangi Clan"
+//     }
+//   ]
+// }

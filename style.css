@@ -1,0 +1,461 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+.bg-1 {
+    background-image: url("https://cdn.pandorarising.com/splash/media-bg.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-2 {
+    background-image: url("https://d3bo0mk5kk7egf.cloudfront.net/imgstore/ElementGalleryItems/attractions/Fullsize/Avatar-Flight-of-Passage_Full_30135.jpg?width=2280&quality=60&encoder=freeimage&progressive=true");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-3 {
+    background-image: url("https://wallpaperaccess.com/full/3232847.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-4 {
+    background-image: url("https://wallpapercave.com/wp/wp5605657.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-5 {
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5a7f41ad8fd4d236a4ad76d0/1518308270641-TYRM063FCC8W6HYPXJIH/ke17ZwdGBToddI8pDm48kL_2mbH3qVHsnO1BBtAucMh7gQa3H78H3Y0txjaiv_0fDoOvxcdMmMKkDsyUqMSsMWxHk725yiiHCCLfrh8O1z5QPOohDIaIeljMHgDF5CVlOqpeNLcJ80NK65_fV7S1UaURqWh2ScMb-Cf8FumqtgfL5pa2BogKsVrPbYqwopcaTCgV58CQKqkVi4LppNMUzA/50_SturmbeastHunt_wide_v02.jpg");
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.home-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.topnav {
+    overflow: hidden; 
+    background-color: transparent;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow: 0 0 9px #000;
+}
+
+.topnav a {
+    float: left;
+    color: #DAE3BB;
+    text-align: center;
+    padding: 20px 95px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+.topnav a:hover {
+    color: #FAF8F0;
+    backdrop-filter: blur(5px);
+}
+
+.video {
+    display: flex;
+    justify-content: center;
+}
+
+.creature-card {
+    width: 300px;
+    min-width: 300px;
+    height: auto;
+    /* background: lightskyblue; */
+    background: #2193b0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #6dd5ed, #2193b0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #6dd5ed, #2193b0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-radius: 40px;
+    margin: 10px;
+    min-height: 356px;
+    transition: all .25s ease;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    cursor: pointer;
+    border: 5px solid black;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.creature-card:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0 50px 80px rgba(0, 0, 0, .07);
+}
+
+.creature-image {
+    width: 290px;
+    height: 180px;
+}
+
+.feed-creature-button {
+    background-color: tan;
+    border-radius: 5px;
+    height: 2rem;
+    width: max-content;
+    font-size: 15px;
+    font-family:fantasy;
+    justify-self: center;
+}
+
+.creature-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    overflow: auto;
+    /* padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 50px; */
+    scroll-behavior: smooth;
+}
+
+.creature-container::-webkit-scrollbar {
+    height: 0px;
+}
+
+.creature-container:after {
+    content: '';
+    display: block;
+    min-width: 20px;
+    height: 100px;
+    position: relative;
+}
+
+.btn {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background: lightskyblue;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    z-index: 200;
+    margin: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    transition: all .25s ease;
+}
+
+.btn:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+
+.btn i {
+    font-size: 1.6rem;
+}
+
+.creature-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.creature-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.language-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.add-language-to-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: fantasy;
+}
+
+.form-box {
+    padding: 8px;
+    margin: 10px;
+}
+
+.language-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.language-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.language-card {
+    border: 5px solid black;
+    /* background-color:white; */
+    background: #C9D6FF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-right: 40px;
+    padding-left: 40px;
+    margin: 5px;
+    border-radius: 40px;
+    font-family: fantasy;
+}
+
+.delete-button {
+    border-radius: 40px;
+    margin-bottom: 5px;
+    font-family: fantasy;
+}
+
+.language-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    overflow:hidden;
+    /* padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 50px; */
+    scroll-behavior: smooth;
+    padding-left: 30px;
+}
+
+.language-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.language-container:after {
+    content: '';
+    display: block;
+    min-height: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.language-btn {
+    min-width: 60px;
+    height: 60px;
+    border-radius: 20px;
+    background: white;
+    border: 0px;
+    outline: none;
+    cursor: pointer;
+    z-index: 200;
+    margin: 10px;
+    box-shadow: 0px 0px 0px 0px rgba(0,0,0,.08);
+    transition: all .25s ease;
+}
+
+.language-btn:hover {
+    transform: translate(0, -10px);
+    box-shadow: 0px 17px 35px 0px rgba(0,0,0,.07);
+}
+
+.language-btn i {
+    font-size: 1.6rem;
+}
+
+.plants-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.plant-card {
+    border: 5px solid black;
+    /* background-color: seagreen; */
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-right: 40px;
+    padding-left: 10px;
+    margin: 5px;
+    border-radius: 40px;
+    font-family: fantasy;
+}
+
+.plant-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    height: 60vh;
+    overflow: hidden;
+}
+
+.plants-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: auto;
+    /* padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 50px; */
+    scroll-behavior: smooth;
+}
+
+.plants-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.plants-container:after {
+    content: '';
+    display: block;
+    min-height: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.plant-image {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+.plants-button {
+    margin: 10px;
+    align-items: center;
+    background-color: grey;
+}
+
+.regions-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.region-card {
+    border: 5px solid black;
+    /* background-color: cornflowerblue; */
+    background: #8360c3;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #2ebf91, #8360c3);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #2ebf91, #8360c3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin: 5px;
+    border-radius: 40px;
+    transform-style: preserve-3d;
+    transition: all 0.20s ease;
+}
+
+.region-card:hover {
+    transform: rotateY(180deg);
+}
+
+.regions-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.regions-container {
+    display: flex;
+    /* align-items: center;
+    justify-content: flex-start; */
+    height: 70vh;
+    overflow: auto;
+    /* padding-top: 100px;
+    padding-left: 60px;
+    padding-right: 50px; */
+    scroll-behavior: smooth;
+}
+
+.regions-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.regions-container:after {
+    content: '';
+    display: block;
+    min-height: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.regions-front {
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    height: 20vh;
+    backface-visibility: hidden;
+    color: black;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.regions-back {
+    position: absolute;
+    /* display: flex; */
+    align-items: center;
+    justify-content: flex-start;
+    height: 40vh;
+    backface-visibility: hidden;
+    color: black;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-family: fantasy;
+}
+
+.region-image {
+    width: 630px;
+    height: 330px;
+    border-radius: 10px;
+}
