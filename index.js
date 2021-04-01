@@ -25,7 +25,6 @@ function renderCreature(creature){
     creatureImage.classList.add("creature-image")
     creatureHabitat.textContent = `Habitat: ${creature.habitat}` 
     creatureHabitat.classList.add("creature-habitat")
-    creatureFeedCount.textContent = `Fed ${creature.feed} time(s)` 
     creatureFeedCount.classList.add("feed-count")
     creatureFeedButton.innerText = "Feed me: 🍖🍃"
     creatureFeedButton.classList.add("feed-creature-button")
@@ -115,6 +114,7 @@ languageForm.addEventListener('submit', (event) => {
     const pronunciation = formData.get('pronunciation')
 
     const newLanguageDiv = document.createElement('div')
+    newLanguageDiv.className = "language-card"
     newLanguageDiv.innerHTML = `
     <h3>${english}</h3>
     <h4>Navi Translation: <br> ${navi}</h4>
@@ -170,14 +170,30 @@ function renderPlant(plant){
     plantDiv.className = "plant-card"
     plantDiv.innerHTML = `
     <h2>${plant.name}</h2>
-    <img src="${plant.image}" class="plant-image"><br>
-    <button class="plants-button">Give it 💦</button>
-    <button class="plants-button">Give it ☀️</button>
-    <button class="plants-button">Give it 🌱</button>
-    <button class="plants-button">Give it 🌬️</button>
+    <div class="front-plant">
+    <img src="${plant.image}" class="plant-image">
+    </div>
+    <p>GIVE IT:
+    <button class="water-button" class="plant-btn">💦</button>
+    <button class="sun-button" class="plant-btn">☀️</button>
+    <button class="plant-button" class="plant-btn">🌱</button>
+    <button class="air-button" class="plant-btn">🌬️</button>
+    </p>
     `
     plantsContainer.append(plantDiv)
 }
+
+// const waterButton = document.querySelector(."water-button")
+// waterButton.addEventListener('click', (event) => {
+//     event.preventDefault()
+
+
+// })
+
+// const sunButton = document.querySelector(."sun-button")
+// const plantButton = document.querySelector(."plant-button")
+// const airButton = document.querySelector(."air-button")
+
 
 const plantNext = document.querySelector("#plantsnext")
 const plantPrev = document.querySelector("#plantsprev")
@@ -217,9 +233,10 @@ function renderRegion(region){
         <h3>Clan(s): ${region.clan}</h3>
     </div>
     <div class="regions-back">
-        <p>${region.creature.name}</p><br>
+        <h2>${region.region}: Creatures and Plants</h2>
+        <p>${region.creature.name}</p>
         <img src="${region.creature.image}" class="creature-image">
-        <p>${region.plant.name}</p><br>
+        <p>${region.plant.name}</p>
         <img src="${region.plant.image}" class="plant-image">
     </div>
     `
