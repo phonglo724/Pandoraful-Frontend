@@ -235,8 +235,6 @@ ul {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 99vw;
-    height: 60vh;
     overflow: hidden;
 }
 
@@ -270,11 +268,7 @@ ul {
     justify-content: flex-start;
     height: 100%;
     overflow:hidden;
-    /* padding-top: 100px;
-    padding-left: 60px;
-    padding-right: 50px; */
     scroll-behavior: smooth;
-    padding-left: 30px;
 }
 
 .language-container::-webkit-scrollbar {
@@ -399,7 +393,7 @@ ul {
     margin: 5px;
     border-radius: 40px;
     transform-style: preserve-3d;
-    transition: all 0.5s ease;
+    transition: transform 0.6s;
 }
 
 .region-card:hover {
@@ -408,6 +402,7 @@ ul {
 }
 
 .regions-card-content {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -417,14 +412,12 @@ ul {
 }
 
 .regions-container {
+    position: relative;
     display: flex;
-    /* align-items: center;
-    justify-content: flex-start; */
+    align-items: center;
+    justify-content: flex-start;
     height: 70vh;
     overflow: auto;
-    /* padding-top: 100px;
-    padding-left: 60px;
-    padding-right: 50px; */
     scroll-behavior: smooth;
 }
 
@@ -441,21 +434,21 @@ ul {
 }
 
 .regions-front {
-    /* display: flex; */
-    align-items: center;
-    justify-content: flex-start;
+    position: relative;
     height: 20vh;
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     color: black;
     text-align: center;
     font-family: fantasy;
+    transition: transform 0.6s;
 }
 
 .regions-back {
     position: absolute;
-    /* display: flex; */
-    align-items: center;
-    justify-content: flex-start;
+    left: 150px;
+    right: 150px;
+    top: 20px;
     height: 20vh;
     backface-visibility: hidden;
     color: black;
@@ -465,12 +458,11 @@ ul {
 }
 
 .region-image {
-    width: 630px;
-    height: 330px;
+    width: 530px;
+    height: 300px;
 }
 
 #region-resource {
     height: 70px;
     width: 70px;
-    /* place-items: center; */
 }
