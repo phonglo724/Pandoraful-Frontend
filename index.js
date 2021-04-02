@@ -114,14 +114,25 @@ languageForm.addEventListener('submit', (event) => {
     const pronunciation = formData.get('pronunciation')
 
     const newLanguageDiv = document.createElement('div')
+    const newDeleteButton = document.createElement('button')
     newLanguageDiv.className = "language-card"
     newLanguageDiv.innerHTML = `
     <h3>${english}</h3>
     <h4>Navi Translation: <br> ${navi}</h4>
     <p>Pronunciation: <br> ${pronunciation}</p>
-    <button class="delete-button">REMOVE FROM LIST</button>
     `
 
+    newDeleteButton.className = "delete-button"
+    newDeleteButton.textContent = `REMOVE FROM LIST`
+    newDeleteButton.addEventListener('click', (event) => {
+        newLanguageDiv.remove()
+
+        fetch(languageAPI + language.id, {
+            method: "DELETE"
+        })
+    })
+
+    newLanguageDiv.append(newDeleteButton)
     languageCard.append(newLanguageDiv)
 
     fetch(languageAPI, {
@@ -157,10 +168,10 @@ languagePrev.addEventListener('click', handleScrollLanguagePrev)
 
 // START OF PLANTS ENDPOINT
 
-const plantsAPI = "http://localhost:3000/plants"
+const plantsURL = "http://localhost:3000/plants"
 const plantsContainer = document.querySelector(".plants-container")
 
-fetch(plantsAPI)
+fetch(plantsURL)
     .then(response => response.json())
     .then(plants => plants.forEach(renderPlant))
 
@@ -174,26 +185,13 @@ function renderPlant(plant){
     <img src="${plant.image}" class="plant-image">
     </div>
     <p>GIVE IT:
-    <button class="water-button" class="plant-btn">💦</button>
-    <button class="sun-button" class="plant-btn">☀️</button>
-    <button class="plant-button" class="plant-btn">🌱</button>
-    <button class="air-button" class="plant-btn">🌬️</button>
+    <button class="plant-button">Water</button>
+    <button class="plant-button">Sun</button>
+    <button class="plant-button">Air</button>
     </p>
     `
     plantsContainer.append(plantDiv)
 }
-
-// const waterButton = document.querySelector(."water-button")
-// waterButton.addEventListener('click', (event) => {
-//     event.preventDefault()
-
-
-// })
-
-// const sunButton = document.querySelector(."sun-button")
-// const plantButton = document.querySelector(."plant-button")
-// const airButton = document.querySelector(."air-button")
-
 
 const plantNext = document.querySelector("#plantsnext")
 const plantPrev = document.querySelector("#plantsprev")
@@ -235,9 +233,9 @@ function renderRegion(region){
     <div class="regions-back">
         <h2>${region.region}: Creatures and Plants</h2>
         <p>${region.creature.name}</p>
-        <img src="${region.creature.image}" class="creature-image">
+        <img src="${region.creature.image}" id="region-resource">
         <p>${region.plant.name}</p>
-        <img src="${region.plant.image}" class="plant-image">
+        <img src="${region.plant.image}" id="region-resource">
     </div>
     `
     regionsContainer.append(regionDiv)
