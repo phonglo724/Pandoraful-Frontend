@@ -1,56 +1,13 @@
+import * as Creatures from '../Creatures/creatures.js'
+import * as Language from '../Language/language.js'
 
 const creaturesURL = "http://localhost:3000/creatures/"
-const creatureCard = document.querySelector("#creature-container")
 
 fetch(creaturesURL)
     .then(response => response.json())
-    .then(creatures => creatures.forEach(renderCreature))
+    .then(creatures => creatures.forEach(Creatures.renderCreature))
 
-function renderCreature(creature){
-    const div = document.createElement("div")
-    const imageDiv = document.createElement("div")
-    const contentDiv = document.createElement("div")
-    const creatureName = document.createElement("h2")
-    const creatureImage = document.createElement("img")
-    const creatureHabitat = document.createElement("h3")
-    const creatureFeedCount = document.createElement("p")
-    const creatureFeedButton = document.createElement("button")
-    
-    div.className = "creature-card"
-    imageDiv.className = "img-div"
-    contentDiv.className = "content-div"
-    creatureName.textContent = creature.name 
-    creatureName.classList.add("creature-name")
-    creatureImage.src = creature.image 
-    creatureImage.classList.add("creature-image")
-    creatureHabitat.textContent = `Habitat: ${creature.habitat}` 
-    creatureHabitat.classList.add("creature-habitat")
-    creatureFeedCount.classList.add("feed-count")
-    creatureFeedButton.innerText = "Feed me: 🍖🍃"
-    creatureFeedButton.classList.add("feed-creature-button")
-    
-    imageDiv.append(creatureName, creatureImage)
-    contentDiv.append(creatureHabitat, creatureFeedCount, creatureFeedButton)
-    div.append(imageDiv, contentDiv)
-    creatureCard.append(div)
-    
-    creatureFeedButton.addEventListener('click', (event) => {
-        creature.feed++
-        creatureFeedCount.textContent = `Fed ${creature.feed} time(s)`
-        
-        fetch(creaturesURL + creature.id, {
-            method: "PATCH",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify({
-                feed: creature.feed
-            })
-        })
-    })
-}
-
-// RIGHT AND LEFT SCROLL BUTTON
+// CREATURES RIGHT AND LEFT SCROLL BUTTON
 
 const next = document.querySelector("#next")
 const prev = document.querySelector("#prev")
@@ -68,85 +25,17 @@ function handleScrollPrev(direction){
 next.addEventListener('click', handleScrollNext)
 prev.addEventListener('click', handleScrollPrev)
 
-// END RIGHT AND LEFT SCROLL BUTTON
+// CREATURES END RIGHT AND LEFT SCROLL BUTTON
 
 // START OF NA'VI LANGUAGE ENDPOINT
 
 const languageAPI = "http://localhost:3000/languages/"
-const languageCard = document.querySelector(".language-container")
 
 fetch(languageAPI)
     .then(response => response.json())
-    .then(languages => languages.forEach(renderLanguage))
+    .then(languages => languages.forEach(Language.renderLanguage))
 
-function renderLanguage(language){
-    const languageFirstDiv = document.createElement("div")
-    const deleteButton = document.createElement("button")
-
-    languageFirstDiv.className = "language-card"
-    languageFirstDiv.innerHTML = `
-    <h3>${language.english}</h3>
-    <h4>Navi Translation: <br> ${language.navi}</h4>
-    <p>Pronunciation: <br> ${language.pronunciation}</p>
-    `
-    deleteButton.className = "delete-button"
-    deleteButton.textContent = `REMOVE FROM LIST`
-    deleteButton.addEventListener('click', (event) => {
-        languageFirstDiv.remove()
-
-        fetch(languageAPI + language.id, {
-            method: "DELETE"
-        })
-    })
-
-    languageFirstDiv.append(deleteButton)
-    languageCard.append(languageFirstDiv)
-}
-
-const languageForm = document.querySelector(".language-form")
-
-languageForm.addEventListener('submit', (event) => {
-    event.preventDefault()
-
-    const formData = new FormData(event.target)
-    const english = formData.get('english')
-    const navi = formData.get('navi')
-    const pronunciation = formData.get('pronunciation')
-
-    const newLanguageDiv = document.createElement('div')
-    const newDeleteButton = document.createElement('button')
-    newLanguageDiv.className = "language-card"
-    newLanguageDiv.innerHTML = `
-    <h3>${english}</h3>
-    <h4>Navi Translation: <br> ${navi}</h4>
-    <p>Pronunciation: <br> ${pronunciation}</p>
-    `
-
-    newDeleteButton.className = "delete-button"
-    newDeleteButton.textContent = `REMOVE FROM LIST`
-    newDeleteButton.addEventListener('click', (event) => {
-        newLanguageDiv.remove()
-
-        fetch(languageAPI + language.id, {
-            method: "DELETE"
-        })
-    })
-
-    newLanguageDiv.append(newDeleteButton)
-    languageCard.append(newLanguageDiv)
-
-    fetch(languageAPI, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            english,
-            navi,
-            pronunciation
-        })
-    })
-})
+// LANGUAGE RIGHT AND LEFT SCROLL BUTTON
 
 const languageNext = document.querySelector("#languagenext")
 const languagePrev = document.querySelector("#languageprev")
