@@ -1,5 +1,7 @@
 import * as Creatures from '../Creatures/creatures.js'
 import * as Language from '../Language/language.js'
+import * as Plants from '../Plants/plants.js'
+import * as Regions from '../Regions/regions.js'
 
 const creaturesURL = "http://localhost:3000/creatures/"
 
@@ -58,29 +60,12 @@ languagePrev.addEventListener('click', handleScrollLanguagePrev)
 // START OF PLANTS ENDPOINT
 
 const plantsURL = "http://localhost:3000/plants"
-const plantsContainer = document.querySelector(".plants-container")
 
 fetch(plantsURL)
     .then(response => response.json())
-    .then(plants => plants.forEach(renderPlant))
+    .then(plants => plants.forEach(Plants.renderPlant))
 
-function renderPlant(plant){
-    const plantDiv = document.createElement("div")
-    
-    plantDiv.className = "plant-card"
-    plantDiv.innerHTML = `
-    <h2>${plant.name}</h2>
-    <div class="front-plant">
-    <img src="${plant.image}" class="plant-image">
-    </div>
-    <p>GIVE IT:
-    <button class="plant-button">Water</button>
-    <button class="plant-button">Sun</button>
-    <button class="plant-button">Air</button>
-    </p>
-    `
-    plantsContainer.append(plantDiv)
-}
+// PLANTS RIGHT AND LEFT SCROLL BUTTONS
 
 const plantNext = document.querySelector("#plantsnext")
 const plantPrev = document.querySelector("#plantsprev")
@@ -103,32 +88,12 @@ plantPrev.addEventListener('click', handleScrollPlantPrev)
  // START OF REGIONS ENDPOINT
 
 const regionsAPI = "http://localhost:3000/regions"
-const regionsContainer = document.querySelector(".regions-container")
 
 fetch(regionsAPI)
     .then(response => response.json())
-    .then(regions => regions.forEach(renderRegion))
+    .then(regions => regions.forEach(Regions.renderRegion))
 
-function renderRegion(region){
-    const regionDiv = document.createElement("div")
-
-    regionDiv.className = "region-card"
-    regionDiv.innerHTML = `
-    <div class="regions-front">
-        <h2>${region.region}</h2>
-        <img src="${region.region_image}" class="region-image">
-        <h3>Clan(s): ${region.clan}</h3>
-    </div>
-    <div class="regions-back">
-        <h2>${region.region}: Creatures and Plants</h2>
-        <p>${region.creature.name}</p>
-        <img src="${region.creature.image}" id="region-resource">
-        <p>${region.plant.name}</p>
-        <img src="${region.plant.image}" id="region-resource">
-    </div>
-    `
-    regionsContainer.append(regionDiv)
-}
+// REGIONS LEFT AND RIGHT SCROLL BUTTON
 
 const regionNext = document.querySelector("#regionsnext")
 const regionPrev = document.querySelector("#regionsprev")
