@@ -24,12 +24,12 @@ COMING SOON
 * HTML & CSS
 
 ## Setup
-To run this project on the frontend, install it locally by cloning the GitHub repository and typing:
+To run this project on the FRONTEND, install it locally by cloning the GitHub repository and type the following in your command line:
 ```
 lite-server
 ```
 
-To run this project in the backend, install it locally by cloning the GitHub repository and typing:
+To run this project in the BACKEND, install it locally by cloning the GitHub repository and type the following in your command line:
 ```
 bundle install
 rails db:migrate
@@ -117,10 +117,9 @@ function renderLanguage(language){
 To-do list:
 * Refactor JavaScript code for a cleaner look
 * Have the buttons in Plants to function accordingly
-* Create modules for each category to separate code
 
 ## Status
-Project is: 90% finished and DRY out code.
+Project is: 95% finished and DRY out code.
 
 ## Inspiration
 The inspiration came from my love for the creativity and vibrate colors in the movie, Avatar. Plus, the upcoming movie to be released in December 2022: "Avatar 2: Return to Pandora"!
