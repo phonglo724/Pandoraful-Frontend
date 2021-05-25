@@ -1,0 +1,92 @@
+.regions-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.region-card {
+    border: 5px solid black;
+    position:relative;
+    width: 100%;
+    height: 100%;
+    background: #7474BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #348AC7, #7474BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #348AC7, #7474BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 5px;
+    border-radius: 40px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.region-card:hover {
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+
+.regions-card-content {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 70vh;
+    overflow: hidden;
+}
+
+.regions-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 70vh;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.regions-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.regions-container:after {
+    content: '';
+    display: block;
+    min-height: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.regions-front {
+    position: relative;
+    height: 20vh;
+    backface-visibility: hidden;
+    color: black;
+    text-align: center;
+    font-family: fantasy;
+    transition: transform 0.6s;
+}
+
+.regions-back {
+    position: absolute;
+    left: 150px;
+    right: 150px;
+    top: 20px;
+    height: 20vh;
+    backface-visibility: hidden;
+    color: black;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-family: fantasy;
+}
+
+.region-image {
+    width: 530px;
+    height: 300px;
+}
+
+#region-resource {
+    height: 100px;
+    width: 100px;
+}

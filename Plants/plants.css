@@ -1,0 +1,63 @@
+.plants-title {
+    color: #AEBE89;
+    font-size: 80px;
+    text-align: center;
+    font-family: 'Epilogue', sans-serif;
+    margin: 0px 0px;
+    text-shadow: 0 0 9px #000;
+}
+
+.plant-card {
+    border: 5px solid black;
+    background: #348F50;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #56B4D3, #348F50);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #56B4D3, #348F50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    margin: 5px;
+    border-radius: 40px;
+    text-align: center;
+    font-family: fantasy;
+}
+
+.plant-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 99vw;
+    overflow: hidden;
+}
+
+.plants-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.plants-container::-webkit-scrollbar {
+    width: 0px;
+}
+
+.plants-container:after {
+    content: '';
+    display: block;
+    min-height: 20px;
+    width: 100px;
+    position: relative;
+}
+
+.plant-image {
+    width: 400px;
+    height: 300px;
+}
+
+.plant-button {
+    align-items: center;
+    background-color: #1A776F;
+    cursor: pointer;
+}
+
+.plant-button:hover {
+    background-color: white;
+}
