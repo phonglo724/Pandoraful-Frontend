@@ -14,8 +14,7 @@
 Pandoraful is a full stack web application where users can discover the world of Pandora through creatures, plants, language, and regions.
 
 ## Intro Video
-COMING SOON
-<!-- [Pandoraful on YouTube]() -->
+[Pandoraful on YouTube](https://www.youtube.com/watch?v=FCi1hzqJhkg)
 
 ## Technologies
 * Ruby - version 2.6.6
