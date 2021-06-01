@@ -10,11 +10,6 @@ function renderPlant(plant){
     <div class="front-plant">
     <img src="${plant.image}" class="plant-image">
     </div>
-    <p>GIVE IT:
-    <button class="plant-button">Water</button>
-    <button class="plant-button">Sun</button>
-    <button class="plant-button">Air</button>
-    </p>
     `
     plantsContainer.append(plantDiv)
 }
