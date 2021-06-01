@@ -39,20 +39,28 @@ rails s
 
 ## Code Examples
 ```HTML
-    <div class="bg-1">
-        <div class="topnav">
-            <h1 class="home-title" id="pandoraful-home">PANDORAFUL</h1>
-            <ul>
-                <li><a href="#creature-page">Creatures</a></li>
-                <li><a href="#navi-language-page">Na'vi Language</a></li>
-                <li><a href="#plants-page">Plants</a></li>
-                <li><a href="#regions-page">Regions</a></li>
+<div class="bg-1">
+    <nav class="topnav" id="myTopnav">
+        <h1 class="home-title" id="pandoraful-home">PANDORAFUL</h1>
+            <ul class="main-nav">
+                <li>
+                    <a href="#creature-page">Creatures</a>
+                </li>
+                <li>
+                    <a href="#navi-language-page">Na'vi Language</a>
+                </li>
+                <li>
+                    <a href="#plants-page">Plants</a>
+                </li>
+                <li>
+                    <a href="#regions-page">Regions</a>
+                </li>
             </ul>
-        </div>
-        <div class="video">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/GBGDmin_38E?controls=0&modestbranding=1&showinfo=0&fs=0&start=7&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+    </nav>
+    <div class="video">
+        <iframe class="responsive-iframe" src="https://www.youtube.com/embed/GBGDmin_38E?controls=0&modestbranding=1&showinfo=0&fs=0&start=7&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
+</div>
 ```
 
 ```JavaScript
@@ -114,12 +122,8 @@ function renderLanguage(language){
 * Scroll through creatures, languages, plants, and regions horizontally by clicking right or left buttons
 * Region cards have a flip functionality to show which creatures and plants inhibit that region
 
-To-do list:
-* Refactor JavaScript code for a cleaner look
-* Have the buttons in Plants to function accordingly
-
 ## Status
-Project is: 95% finished and DRY out code.
+Project is: 100% finished.
 
 ## Inspiration
 The inspiration came from my love for the creativity and vibrate colors in the movie, Avatar. Plus, the upcoming movie to be released in December 2022: "Avatar 2: Return to Pandora"!
