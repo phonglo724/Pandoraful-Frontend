@@ -14,17 +14,25 @@
 </head>
 <body>
     <div class="bg-1">
-        <div class="topnav">
+        <nav class="topnav" id="myTopnav">
             <h1 class="home-title" id="pandoraful-home">PANDORAFUL</h1>
-            <ul>
-                <li><a href="#creature-page">Creatures</a></li>
-                <li><a href="#navi-language-page">Na'vi Language</a></li>
-                <li><a href="#plants-page">Plants</a></li>
-                <li><a href="#regions-page">Regions</a></li>
+            <ul class="main-nav">
+                <li>
+                    <a href="#creature-page">Creatures</a>
+                </li>
+                <li>
+                    <a href="#navi-language-page">Na'vi Language</a>
+                </li>
+                <li>
+                    <a href="#plants-page">Plants</a>
+                </li>
+                <li>
+                    <a href="#regions-page">Regions</a>
+                </li>
             </ul>
-        </div>
+        </nav>
         <div class="video">
-            <iframe width="800" height="450" src="https://www.youtube.com/embed/GBGDmin_38E?controls=0&modestbranding=1&showinfo=0&fs=0&start=7&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class="responsive-iframe" src="https://www.youtube.com/embed/GBGDmin_38E?controls=0&modestbranding=1&showinfo=0&fs=0&start=7&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
     </div>
     <div class="bg-2" id="creature-page">
@@ -71,7 +79,7 @@
                 <button id="languageprev" class="btn">
                     <i class="bx bxs-chevron-left"></i>
                 </button>
-                    <div class="language-container" id="language-container">
+                    <div class="language-container">
 
                     </div>
                 <button id="languagenext" class="btn">
@@ -94,7 +102,7 @@
             <button id="plantsprev" class="btn">
                 <i class="bx bxs-chevron-left"></i>
             </button>
-        <div class="plants-container">
+        <div class="plants-container" id="plants-container">
 
         </div>
             <button id="plantsnext" class="btn">
@@ -116,7 +124,7 @@
             <button id="regionsprev" class="btn">
                 <i class="bx bxs-chevron-left"></i>
             </button>
-        <div class="regions-container">
+        <div class="regions-container" id="regions-container">
 
         </div>
             <button id="regionsnext" class="btn">

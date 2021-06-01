@@ -6,7 +6,7 @@ function renderRegion(region){
     regionDiv.className = "region-card"
     regionDiv.innerHTML = `
     <div class="regions-front">
-        <h2>${region.region}</h2>
+        <h2 class="region-name">${region.region}</h2>
         <img src="${region.region_image}" class="region-image">
         <h3>Clan(s): ${region.clan}</h3>
     </div>
