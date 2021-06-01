@@ -27,7 +27,7 @@ function handleScrollPrev(direction){
 next.addEventListener('click', handleScrollNext)
 prev.addEventListener('click', handleScrollPrev)
 
-// CREATURES END RIGHT AND LEFT SCROLL BUTTON
+// END OF CREATURES ENDPOINT
 
 // START OF NA'VI LANGUAGE ENDPOINT
 

@@ -6,7 +6,7 @@ function renderPlant(plant){
     
     plantDiv.className = "plant-card"
     plantDiv.innerHTML = `
-    <h2>${plant.name}</h2>
+    <h2 class="plant-name">${plant.name}</h2>
     <div class="front-plant">
     <img src="${plant.image}" class="plant-image">
     </div>

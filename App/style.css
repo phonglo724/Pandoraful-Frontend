@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 body, html {
@@ -9,10 +11,47 @@ body, html {
     scroll-behavior: smooth;
 }
 
+.responsive-iframe {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    bottom: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    border: none;
+}
+
 ul {
     list-style: none;
     display: flex;
     justify-content: space-around;
+}
+
+.main-nav li {
+    text-align: center;
+    margin: 15px auto;
+}
+
+@media screen and (max-width: 600px) {
+    .topnav {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 0;
+        height: 70px;
+        align-items: center;
+    }
+
+    .main-nav {
+        display: flex;
+        margin-right: 30px;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .main-nav li {
+        margin: 0;
+    }
 }
 
 .bg-1 {
@@ -90,11 +129,6 @@ ul {
     backdrop-filter: blur(5px);
 }
 
-.video {
-    display: flex;
-    justify-content: center;
-}
-
 .btn {
     min-width: 60px;
     height: 60px;
@@ -117,3 +151,4 @@ ul {
 .btn i {
     font-size: 1.6rem;
 }
+

@@ -7,7 +7,7 @@ function renderLanguage(language){
 
     languageFirstDiv.className = "language-card"
     languageFirstDiv.innerHTML = `
-    <h3>${language.english}</h3>
+    <h3 class="language-english-title">${language.english}</h3>
     <h4>Navi Translation: <br> ${language.navi}</h4>
     <p>Pronunciation: <br> ${language.pronunciation}</p>
     `
