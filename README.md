@@ -126,9 +126,11 @@ function renderLanguage(language){
 Project is: 100% finished.
 
 ## Inspiration
-The inspiration came from my love for the creativity and vibrate colors in the movie, Avatar. Plus, the upcoming movie to be released in December 2022: "Avatar 2: Return to Pandora"!
+From watching the movie, Avatar and actually getting to see a live version of the planet at Animal Kingdom. The creativity and vibrate colors from the movie is what inspired me to build this website. Plus, I'm excited for the upcoming movie to be released in December 2022: "Avatar 2: Return to Pandora"! Eagerly waiting to see what exciting features the film will bring.
 
 ## Contact
 Created by [Phong Lo](https://www.linkedin.com/in/phong-lo)
 
-Feel free to contact me!!!
+Feel free to contact me!!! 😀
+
+<!-- Command Ctrl Spacebar to bring up emoji's -->
